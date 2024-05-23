@@ -1,0 +1,46 @@
+<title>MF2</title>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">#MF2# - Controle de formulários</a>
+    </div>
+  </nav>
+
+  <section style="background-color: black;" class="jumbotron text-center">
+    <div class="container">
+      <h1 class="display-3">Preencher formulário</h1>
+      <p class="lead">Utilize o MF1 para inserir um novo formulário</p>
+      <a routerLink="/mfe1" style='background-color: #343a40' class="btn text-light btn-lg">Novo formulário</a>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div style="background: #343a40;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding-top: 30px;" class="container">
+      <h2>Lista de formulários</h2>
+      <div class="container">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Email</th>
+              <th scope="col">Mensagem</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let formulario of formularios; let i = index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{formulario.nome}}</td>
+              <td>{{formulario.email}}</td>
+              <td>{{formulario.mensagem}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>

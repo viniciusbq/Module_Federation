@@ -1,0 +1,26 @@
+<body>
+  <div class="container wrapper">
+    <div class="content">
+      <h2>Formulário de Contato</h2>
+      <form id="contact-form" action="#" method="post" [formGroup]="formularioForm">
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required  formControlName="nome">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required  formControlName="email">
+        </div>
+        <div class="form-group">
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message" rows="4" required formControlName="mensagem"></textarea>
+        </div>
+        <button (click)="salvarFormulario()" type="submit" routerLink="/mfe1" style="background-color: #343a40;" class="btn">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  
+</body>
+
+<router-outlet></router-outlet>
